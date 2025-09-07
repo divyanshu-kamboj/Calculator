@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px 15px rgb(51 45 37 / 91%);
+}
+
+.calculator__display {
+  background: #f4f4f4;
+  color: black;
+  font-size: 2rem;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 5px solid black;
+}
+
+.calculator__keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 5px;
+  background: black;
+  padding: 5px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+button[data-action="add"],
+button[data-action="subtract"],
+button[data-action="multiply"],
+button[data-action="divide"] {
+  background: #ffcc66;
+}
+
+button[data-action="clear"] {
+  background: #ff6666;
+  color: white;
+}
+
+.equal {
+  grid-column: span 4; /* Make equal button full width */
+  background: #66cc66;
+  color: white;
+  font-weight: bold;
+}
